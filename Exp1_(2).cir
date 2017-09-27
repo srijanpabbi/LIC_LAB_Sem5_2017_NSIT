@@ -1,0 +1,11 @@
+*inverting amp
+r1 0 2 1k
+rf 2 6 1k
+x 1 2 7 4 6 ua741
+vin 1 0 sin(0 0.1 1k)
+vp 7 0 dc 12
+vn 0 4 dc 12
+.lib C:\Cadence\SPB_17.2\tools\pspice\library\opamp.lib
+.tran .9m 3m
+.probe
+.end
