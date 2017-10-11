@@ -1,0 +1,44 @@
+
+**** 10/04/17 16:31:18 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ *integrator
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+*r1 1 2 1k
+*r2 2 6 10k
+*c1 2 6 0.1uf
+*x  0 2 7 4 6 ua741
+*vin 1 0 pulse(-0.01 0.01 0 0 0 0.5m 1ms)
+*vin 1 0 ac 1v
+*vp 7 0 dc 12
+*vn 0 4 dc 12
+*.lib C:\Cadence\SPB_17.2\tools\pspice\library\opamp.lib
+*.tran .01u 10m
+*.ac dec 100 1 100k
+*.probe
+*.end
+
+*diffrentiator
+c1 1 2 0.1uf
+*r1 3 2 1k
+r2 2 6 0
+-------$
+ERROR(ORPSIM-16144): Value may not be 0
+x 0 2 7 4 6 ua741
+*vin 1 0 pulse(-0.01 0.01 0 0 0 0.5m 1ms)
+vin 1 0 ac 1v
+vp 7 0 dc 12
+vn 0 4 dc 12
+.lib C:\Cadence\SPB_17.2\tools\pspice\library\opamp.lib
+*.tran .01u 10m
+.ac dec 100 1 100k
+.probe
+.end
+
