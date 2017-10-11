@@ -1,0 +1,18 @@
+* differential amplifier
+ rc1 6 4 1k
+ rc2 6 5 1k
+ rd 10 0 1
+ rb 8 0 4.3k
+ q1 4 1 2 q2n2222
+ q2 5 3 2 q2n2222
+ q3 8 8 9 q2n2222
+ q4 2 8 9 q2n2222
+ vcc 6 0 dc 5V
+ vee 0 9 dc 5V
+ e1 1 7 10 0 0.5
+ e2 7 3 10 0 0.5
+ Vcm 7 0 ac 1V
+ vd 10 0 dc 5V
+ .dc vd -5V 5V .1V
+ .probe
+ .end
