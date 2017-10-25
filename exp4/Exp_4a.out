@@ -1,0 +1,75 @@
+
+**** 10/25/17 16:43:18 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ * non inverting amp
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+r1 0 2 1k
+rf 2 6 2k
+x 1 2 6 opamp1
+*trans vin 1 0 sin(0 0.1 1k)
+*ac
+ vin 1 0 ac 0.1
+*dc vin 1 0 dc 0
+.lib C:\Users\LAB\Desktop\Srijan_ece3_2017\opamp1.lib
+*trans .tran .9m 3m
+*ac 
+.ac dec 100 1 1000meg
+*dc .dc vin -12 12 0.01
+.probe
+.end
+
+**** 10/25/17 16:43:18 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ * non inverting amp
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    0.0000  (    2)    0.0000  (    6)    0.0000  (  x.3)    0.0000      
+
+(  x.4)    0.0000  (  x.5)    0.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    vin          0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/25/17 16:43:18 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ * non inverting amp
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+
